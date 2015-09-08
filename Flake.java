@@ -16,7 +16,7 @@ public class Flake {
         for(int i=0;i<=3;i++)
         {
             flakeSide(S,N,t);
-           t.left(-120);
+            t.left(120);
            
         }
      
@@ -32,11 +32,11 @@ public class Flake {
           
           
           flakeSide(S,N-1,t);
-          t.left(60);
+          t.right(60);
           flakeSide(S,N-1,t);
-          t.right(120);
+          t.left(120);
           flakeSide(S,N-1,t);
-          t.left(60);
+          t.right(60);
           flakeSide(S,N-1,t);
           
                     
@@ -47,15 +47,16 @@ public class Flake {
     }
     public static Turtle init(int S)
     {
-      turtle = new Turtle(15,20,0);
-      turtle.setworldcoordinates(20, 30, 10, 10);
+      turtle = new Turtle(0,0,0);
+      turtle.screensize(1980, 1080);
+      turtle.setworldcoordinates(-10000, -10000, 10000, 10000);
      
       return turtle;
     }
     public static void main(String []args)
     {
         init(100);
-        flake(.5,1,turtle);
+        flake(100,1,turtle);
         
     }
 }
